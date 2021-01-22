@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebProje.Models.Yazar>
+@{
+    ViewBag.Title = "Yazar_Listele";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center; margin-top: 34px; font-size:30px"><b>YAZAR LİSTESİ</b></h2>
+<br><br>
+    <h6 style="padding-bottom:1rem; padding-left: 2em;"> @Html.ActionLink("YENİ KAYIT OLUŞTUR", "Ekle", new { }) </h6>
+
+<link href="~/Properties/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+<table class="table table-row">
+
+    <tr style="text-align:center">
+        <th>Yazarın Adı</th>
+        <th>Yazarın Yaşı</th>
+        <th>Yazarın Doğum Yeri</th>
+        <th>Kitap Adı</th>
+
+    </tr>
+
+    @foreach (var a in Model)
+    {
+        <tr style="text-align:center">
+            <td>@Html.DisplayFor(model => a.YazarAd)</td>
+            <td>@Html.DisplayFor(model => a.YazarYas)</td>
+            <td>@Html.DisplayFor(model => a.YazarUlke)</td>
+            <td>@Html.DisplayFor(model => a.KitapAd)</td>
+
+
+            <td>@Html.ActionLink("Güncelle", "Güncelle", new { id = a.Id }) </td>
+            <td>@Html.ActionLink("Sil", "Sil", new { id = a.Id }) </td>
+        </tr>
+    }
+
+</table>
+

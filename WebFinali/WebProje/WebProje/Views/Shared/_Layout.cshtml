@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="~/en_film/style.css">
+</head>
+
+<body>
+
+    <div id="ust">
+        <img id="logo" src="~/en_film/res/logo3.png" alt="logo">
+        <font>EN KİTAP | <span>Kendi Alanında Rakip Tanımayan En iyi Kitaplar..</span></font>
+    </div>
+
+
+    <div id="container">
+        <header>
+            <img id="orta" src="~/en_film/res/baslik.jpg" alt="">
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="/Kitap/Kitap_Listesi">KİTAP LİSTELEME SAYFASI</a></li>
+                    <li><a href="/Yazar/Yazar_Listele">YAZAR LİSTELEME SAYFASI</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">X</a></li>
+
+                </ul>
+            </nav>
+
+           <main>
+               @RenderBody()
+           </main>
+        </section>
+
+        <footer>Tüm Hakları Saklıdır &copy; 2020 </footer>
+
+    </div>
+
+</body>
+</html>
